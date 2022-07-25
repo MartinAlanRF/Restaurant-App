@@ -1,8 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom'
+
 /* Importando mis componentens */
 /* NavBar */
 import NavBar from '../components/NavBar';
+/* Footer */
+import Footer from '../components/Footer';
 /* Importando mis Paginas */
 import HomePage from '../pages/HomePage';
 
@@ -21,6 +24,7 @@ const AppRouter = () => {
             en automatico lo detecta y hace el redireccionamiento */}
             <Route path='#' element={ <Navigate to='/'/> }/>
         </Routes>
+        <Footer/>
     </Router>
   )
 }
