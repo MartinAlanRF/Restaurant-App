@@ -20,7 +20,13 @@ body {
 #carousel{
     margin: 10px;
     padding: 10px;
-    height: 300px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/* Tengo que modificar el tamaño cuando se redusca la pantalla */
+#carousel img{
+    height: 400px;
 }
 
 
@@ -49,10 +55,14 @@ body {
     margin: 5px;
 }
 
-#estado #veracruz{
-    height: 250px;
+#estado{
+    margin: 0px auto;
 }
 
+#estado #veracruz{
+    height: 250px;
+    text-align: center;
+}
 
 
 iframe {
@@ -62,6 +72,16 @@ iframe {
     border-radius: 5px;
     border: 5px solid #fff;
     box-shadow: 0px 0px 5px #808080;
+}
+
+#acercade > .card{
+    
+    background: none;
+    border: none;
+}
+
+#acercade > .card  p{
+    text-align: justify;
 }
 
 #footer{
