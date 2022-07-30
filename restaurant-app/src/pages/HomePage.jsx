@@ -1,14 +1,48 @@
-import React from "react";
+import React, {useState} from 'react'
+/* Importanto imagenes de mi carpeta assets */
 import imageVeracruz from "../assets/veracruz.jpg";
-
+/* Imagenes del carousel */
 import imageCaurosel1 from "../assets/comida/Arroz-a-la-tumbada.jpg";
 import imageCaurosel2 from "../assets/comida/Chilpachole-de-jaiba.jpg";
 import imageCaurosel3 from "../assets/comida/pescadoVeracruzana.jpg";
 import imageCaurosel4 from "../assets/comida/zacahuil1.jpg";
 
+/* Aquí se manda a llamar a firebase */
+import {db} from "../firebase/firebase";
+/* Este import es para cuando se hace uso de no-sql firestone
+y traer las consultas, así como crear, editar y eliminar datos */
+import 
+{   
+    collection, // buscar ese registro
+    addDoc, //añadir registro
 
+} from "firebase/firestore"
+
+const initialForm = {
+  nombre: "",
+  apellido: "",
+  acompanantes: "",
+  date: "",
+  hora:""
+}
 
 const HomePage = () => {
+  const [form, setform] = useState(initialForm);
+
+  const createReservation = async ()=>{
+    const coleccion = collection(db, "reservaciones");
+    await addDoc(coleccion, form);
+    console.log(form)
+
+     document.getElementById('nombre').value = "";
+     document.getElementById('apellido').value = "";
+     document.getElementById('acompanantes').value = "";
+     document.getElementById('date').value = "";
+     document.getElementById('hora').value = "";
+
+     alert('Reservación creada')
+  }
+
   return (
     <>
       <div className="container">
@@ -177,7 +211,7 @@ const HomePage = () => {
               <div id="reservacion" className="container text-center">
                 <h2>ZONA DE RESERVACIONES</h2>
               </div>
-              <div  className="col-lg-4 col-md-12 col-sm-12">
+              <div  className="col-lg-6 col-md-12 col-sm-12">
                 <section id="acede">
                       <div className="card">
                         <div className="card-body">
@@ -199,30 +233,74 @@ const HomePage = () => {
                       </div>
                 </section>
               </div>
-              <div className="col-lg-8 col-md-12 col-sm-12">
-                <form action>
+              <div className="col-lg-6 col-md-12 col-sm-12">
+                <form>
                 <div className="form-group">
                     <div className="input-group mt-3 mb-3">
-                      <span htmlFor="apellidos" className="input-group-text" id>Nombre</span>
-                      <input id="apellidos" type="text" className="form-control" placeholder="Nombre" />
+                      <span htmlFor="nombre" className="input-group-text" >Nombre</span>
+                      <input id="nombre" type="text" className="form-control" placeholder="Nombre" autoComplete='off' 
+                            value={form.nombre} 
+                            onChange={(e)=>{
+                              setform(
+                                  {...form,
+                                      nombre: e.target.value});
+                            }}
+                            />
                     </div> 
                   </div>
                   <div className="form-group">
                     <div className="input-group mt-3 mb-3">
-                      <span htmlFor="apellidos" className="input-group-text" id>Apellidos</span>
-                      <input id="apellidos" type="text" className="form-control" placeholder="Apellidos" />
+                      <span htmlFor="apellido" className="input-group-text" >Apellidos</span>
+                      <input id="apellido" type="text" className="form-control" placeholder="Apellidos" autoComplete='off' 
+                            value={form.apellido}
+                            onChange={(e)=>{
+                              setform(
+                                  {...form,
+                                    apellido: e.target.value});
+                            }}/>
                     </div> 
                   </div>
                   <div className="form-group">
                     <div className="input-group mt-3 mb-3">
-                      <span htmlFor="acompanantes" className="input-group-text" id>Cantidad de personas</span>
-                      <input id="apellidos" type="text" className="form-control" placeholder="Acompañantes" />
+                      <span htmlFor="acompanantes" className="input-group-text" >Cantidad de personas</span>
+                      <input id="acompanantes" type="number" className="form-control" placeholder="Ejemplo 5" autoComplete='off' 
+                             value={form.acompanantes}
+                             onChange={(e)=>{
+                              setform(
+                                  {...form,
+                                    acompanantes: e.target.value});
+                            }}/>
                     </div> 
                   </div>
-                  <button type="submit" className="mx-auto col-8 btn btn-success">
+                  <div className="form-group">
+                    <div className="input-group mt-3 mb-3">
+                      <span htmlFor="date" className="input-group-text" >Fecha</span>
+                      <input id="date" type="date" className="form-control"  autoComplete='off' 
+                             value={form.date}
+                             onChange={(e)=>{
+                              setform(
+                                  {...form,
+                                    date: e.target.value});
+                            }}/>
+                    </div> 
+                  </div>
+                  <div className="form-group">
+                    <div className="input-group mt-3 mb-3">
+                      <span htmlFor="hora" className="input-group-text" >Hora</span>
+                      <input id="hora" type="text" className="form-control"  autoComplete='off' 
+                             value={form.hora}
+                             onChange={(e)=>{
+                              setform(
+                                  {...form,
+                                    hora: e.target.value});
+                            }}/>
+                    </div> 
+                  </div>
+
+                </form>
+                <button onClick={createReservation}  className="col-8 btn btn-success">
                     Reservar
                   </button>
-                </form>
               </div>
             </div>
           </div>
