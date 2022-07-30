@@ -6,7 +6,9 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  /* Comomento esto para que no se ejecute dos veces 
+  mis funciones de javaScript en mis pages */
+ /*  <React.StrictMode> */
     <App />
-  </React.StrictMode>
+  /* </React.StrictMode> */
 );
