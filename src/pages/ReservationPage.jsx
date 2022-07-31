@@ -43,7 +43,7 @@ const ReservationPage = () => {
         <div className="main">
           <div id="containerTitulo" className="container text-center mt-1">
             <h1>
-              NUESTRAS RESERVACIONES
+               RESERVACIONES
             </h1>
           </div>
           <div id="alerta">
