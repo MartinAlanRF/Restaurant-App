@@ -28,6 +28,17 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                 <NavLink
+                      to="/menu"
+                      aria-current="page"
+                      className={({ isActive }) =>
+                        isActive ? "nav-link active" : "nav-link"
+                      }
+                    >
+                    MENU
+                </NavLink>
+                </li>
+                <li className="nav-item">
+                <NavLink
                       to="/reservation"
                       aria-current="page"
                       className={({ isActive }) =>
@@ -35,7 +46,7 @@ const NavBar = () => {
                       }
                     >
                     RESERVACIONES
-                  </NavLink>
+                </NavLink>
                 </li>
               </ul>
               <ul className="navbar-nav  mb-2 mb-lg-0">

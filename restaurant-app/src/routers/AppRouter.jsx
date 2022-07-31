@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 /* Importando mis Paginas */
 import HomePage from '../pages/HomePage';
 import ReservationPage from '../pages/ReservationPage';
+import MenuPage from '../pages/MenuPage';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <NavBar/>
         <Routes>
             <Route path="/" element={<HomePage/>} />
+            <Route path="/menu" element={<MenuPage/>}/>
             <Route path="/reservation" element={<ReservationPage/>} />
             {/* El navigate lo implemento para que me rediriga a HomePage en caso
             de que la tura que se le de a mi webApp no este dentro de Router, entonces
