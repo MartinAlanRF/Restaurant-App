@@ -7,7 +7,7 @@ const NavBar = () => {
         <nav className=" mx-auto navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
             <a className="navbar-brand" href="/">
-              EL PEDACTIDO DE VERACRUZ
+              EL SABOR DE VERACRUZ
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#menuResponsive"  aria-label="Toggle navigation">

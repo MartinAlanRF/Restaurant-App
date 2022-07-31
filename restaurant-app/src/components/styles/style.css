@@ -87,14 +87,13 @@ body {
     padding: 10px;
     max-height: 400px;
     overflow: hidden;
+    width: 75%;
 }
 
 /* Tengo que modificar el tamaño cuando se redusca la pantalla */
 #carousel img{
     height: 400px;
 }
-
-
 
 iframe {
     width: 100%;
@@ -156,6 +155,110 @@ iframe {
 
 /* Al realizar los mediaquery debo de cambiar muchos font sixze así como alinear la imagen del estado de veracruz */
 
-@media (max-width: 993px) {
-    
+@media (max-width: 1223px) {
+    #containerTitulo h1, #containerCarousel h3, #containerAcercade h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    #containerTitulo h1, #containerCarousel h3, #containerAcercade h2 {
+        font-size: 25px;
+    }
+    #jumbotron p {
+        font-size: 17px;
+    }
+
+    #carousel{
+        width: 100%;
+    }
+
+    #acercade {
+        height: 240px;
+        max-height: 400px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    #containerTitulo h1 {
+        font-size: 25px;
+    }
+
+    #containerCarousel h3, #containerAcercade h2 {
+        font-size: 30px;
+    }
+
+    #estado #veracruz {
+        height: 300px;
+        width: 70%;
+        text-align: center;
+    }
+
+    #jumbotron {
+        height: 240px;
+        width: 100%;
+    }
+
+    #jumbotron p {
+        font-size: 20px;
+    }
+
+    #carousel{
+        width: 100%;
+        height: 300px;
+    }
+
+    #carousel img {
+         height: 300px;
+    }
+
+    #acercade {
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+}
+
+@media (max-width: 548px) { 
+    #containerTitulo h1 {
+        font-size: 20px;
+    }
+
+    #containerCarousel h3, #containerAcercade h2 {
+        font-size: 20px;
+    }
+
+    #reservacion h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 557px) { 
+    #jumbotron h1 {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    #acercade {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 414px) { 
+    #containerTitulo h1 {
+        font-size: 18px;
+    }
+    #containerCarousel h3, #containerAcercade h2 {
+        font-size: 18px;
+    }
+    #reservacion h2 {
+        font-size: 18px;
+    }
+
+    #jumbotron p {
+        font-size: 15px;
+    }
 }

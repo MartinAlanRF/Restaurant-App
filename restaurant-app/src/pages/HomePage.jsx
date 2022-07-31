@@ -35,7 +35,7 @@ const HomePage = () => {
     console.log(form)
 
      document.getElementById('nombre').value = "";
-     document.getElementById('apellido').value = "";
+     document.getElementById('apellidos').value = "";
      document.getElementById('acompanantes').value = "";
      document.getElementById('date').value = "";
      document.getElementById('hora').value = "";
@@ -49,7 +49,7 @@ const HomePage = () => {
         <main>
           <div id="containerTitulo" className="container text-center mt-1">
             <h1>
-              BIENVENIDOS AL RESTAURANTE PEDACITO DE VERACRUZ
+              BIENVENIDOS AL SABOR DE VERACRUZ
             </h1>
           </div>
           <div className="col-12 mt-2  mx-auto">
@@ -68,7 +68,7 @@ const HomePage = () => {
                 <div id="containerJumbotron" className="container">
                   <div id="jumbotron" className="p-3 text-white rounded ">
                     <h1 className="display-6 text-center">
-                      PEDACITO DE VERACRUZ
+                      SABOR DE VERACRUZ
                     </h1>
                     <p className="">
                       En este restaurante te esperan algunos de los platillos
@@ -85,7 +85,7 @@ const HomePage = () => {
                   <h3>PLATILLOS FAVORITOS</h3>
                 </div>
                 <div id="carousel"
-                  className="carousel slide w-75 mx-auto"
+                  className="carousel slide  mx-auto"
                   data-bs-interval={3000}
                   data-bs-ride="carousel"
                 >
@@ -191,7 +191,7 @@ const HomePage = () => {
                     <div className="card">
                       <div className="card-body">
                         <h4 className="card-title">
-                          El PEDACITO DE VERACRUZ
+                          EL SABOR DE VERACRUZ
                         </h4>
                         <h6>Fundado en 2022</h6>
                         <p className="card-text">                    
@@ -213,6 +213,13 @@ const HomePage = () => {
               </div>
               <div  className="col-lg-6 col-md-12 col-sm-12">
                 <section id="acede">
+                <div className="container mx-autos">
+                    <iframe title='Mapa'
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9574.923064887667!2d-96.93203505723477!3d19.553011423316423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db2e2298badf87%3A0x2fee5115e2d809ae!2sBenem%C3%A9rita%20Escuela%20Normal%20Veracruzana%20Enrique%20C.%20Rebsamen!5e0!3m2!1ses-419!2smx!4v1657842123653!5m2!1ses-419!2smx" 
+                                width={600} height={300} style={{border: 0}} 
+                                allowFullScreen loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade" />
+                  </div>
                       <div className="card">
                         <div className="card-body">
                           <h3 className="card-title">
@@ -223,84 +230,88 @@ const HomePage = () => {
                               Xalapa Centro 
 
                               Ciudad de Xalapa, VER 91100
-
-                              Phone number
+                              <br />
+                              Phone number:
                               +52 (2282) 123-4567
-                              Email
+                              <br />
+                              Email:
                               contacto@pedacitoVer.com.mx
                           </p>
                         </div>
                       </div>
+
                 </section>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="col-lg-6 col-md-12 col-sm-12 mt-3">
                 <form>
-                <div className="form-group">
-                    <div className="input-group mt-3 mb-3">
-                      <span htmlFor="nombre" className="input-group-text" >Nombre</span>
-                      <input id="nombre" type="text" className="form-control" placeholder="Nombre" autoComplete='off' 
-                            value={form.nombre} 
-                            onChange={(e)=>{
-                              setform(
-                                  {...form,
-                                      nombre: e.target.value});
-                            }}
-                            />
-                    </div> 
-                  </div>
-                  <div className="form-group">
-                    <div className="input-group mt-3 mb-3">
-                      <span htmlFor="apellido" className="input-group-text" >Apellidos</span>
-                      <input id="apellido" type="text" className="form-control" placeholder="Apellidos" autoComplete='off' 
-                            value={form.apellido}
-                            onChange={(e)=>{
-                              setform(
-                                  {...form,
-                                    apellido: e.target.value});
-                            }}/>
-                    </div> 
-                  </div>
-                  <div className="form-group">
-                    <div className="input-group mt-3 mb-3">
-                      <span htmlFor="acompanantes" className="input-group-text" >Cantidad de personas</span>
-                      <input id="acompanantes" type="number" className="form-control" placeholder="Ejemplo 5" autoComplete='off' 
-                             value={form.acompanantes}
-                             onChange={(e)=>{
-                              setform(
-                                  {...form,
-                                    acompanantes: e.target.value});
-                            }}/>
-                    </div> 
-                  </div>
-                  <div className="form-group">
-                    <div className="input-group mt-3 mb-3">
-                      <span htmlFor="date" className="input-group-text" >Fecha</span>
-                      <input id="date" type="date" className="form-control"  autoComplete='off' 
-                             value={form.date}
-                             onChange={(e)=>{
-                              setform(
-                                  {...form,
-                                    date: e.target.value});
-                            }}/>
-                    </div> 
-                  </div>
-                  <div className="form-group">
-                    <div className="input-group mt-3 mb-3">
-                      <span htmlFor="hora" className="input-group-text" >Hora</span>
-                      <input id="hora" type="text" className="form-control"  autoComplete='off' 
-                             value={form.hora}
-                             onChange={(e)=>{
-                              setform(
-                                  {...form,
-                                    hora: e.target.value});
-                            }}/>
-                    </div> 
-                  </div>
+                <div className="form-floating mb-3">
+                  <input type="text" className="form-control" id="nombre" placeholder="Nombres" 
+                    autoComplete='off' 
+                    value={form.nombre} 
+                    onChange={(e)=>{
+                      setform(
+                          {...form,
+                              nombre: e.target.value});
+                    }}
+                  />
+                  <label htmlFor="nombre" >Nombre</label>
+                </div>
+                <div className="form-floating mb-3">
+                  <input type="text" className="form-control" id="apellidos" placeholder="Apellidos" 
+                    autoComplete='off' 
+                    value={form.apellido}
+                    onChange={(e)=>{
+                      setform(
+                          {...form,
+                            apellido: e.target.value});
+                    }}/>
+                  <label htmlFor="apellidos">Apellidos</label>
+                </div>
+                    
+                <div className="form-floating mb-3">
+                  <input type="number" className="form-control" id="acompanantes" placeholder="2"
+                  autoComplete='off' 
+                  value={form.acompanantes}
+                  onChange={(e)=>{
+                   setform(
+                       {...form,
+                         acompanantes: e.target.value});
+                    }} 
+                  />
+                  <label htmlFor="acompanantes">Acompañantes</label>
+                </div>
 
+                <div className="form-floating mb-3">
+                  <input type="date" className="form-control" id="date" 
+                    autoComplete='off' 
+                    value={form.date}
+                    onChange={(e)=>{
+                     setform(
+                         {...form,
+                           date: e.target.value});
+                    }}
+                   />
+                  <label htmlFor="date">Fecha</label>
+                </div>
+
+                <div className="form-floating mb-3">
+                  <input type="text" className="form-control" id="hora" 
+                    autoComplete='off' 
+                    value={form.hora}
+                    onChange={(e)=>{
+                     setform(
+                         {...form,
+                          hora: e.target.value});
+                    }}
+                   />
+                  <label htmlFor="hora">Hora</label>
+                </div>
                 </form>
-                <button onClick={createReservation}  className="col-8 btn btn-success">
+                <div className="container mx-auto col-12">
+                <button onClick={createReservation}  className="col-12 btn btn-success mx-auto">
                     Reservar
-                  </button>
+                </button>
+                </div>
               </div>
             </div>
           </div>
