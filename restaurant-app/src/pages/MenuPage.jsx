@@ -18,6 +18,11 @@ const MenuPage = () => {
   return (
     <>
         <div className="container mt-4">
+            <div id="containerTituloMenu" className="text-center">
+                <h1>
+                    MENÚ
+                </h1>
+            </div>
             <div id="menu">
             <div className="row">
                 <div className="card mb-3 mx-auto p-0" style={{maxWidth: 540}}>
@@ -130,7 +135,7 @@ const MenuPage = () => {
                         <div className="card-body">
                             <h5 className="card-title">CAMARONES AL COCO</h5>
                             <p className="card-text">
-                                Estos camarones se preparan con ralladura de coco, harina 
+                                Camarones preparados con ralladura de coco, harina 
                                 y una mezcla con cerveza, huevo y harina que permite que 
                                 la ralladura de coco se adhiera mejor a los camarones. 
                                 Acompañados de arroz y salsa.

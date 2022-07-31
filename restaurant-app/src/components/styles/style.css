@@ -8,7 +8,6 @@ body {
     background: url("../../assets/pattern.png");
 }
 
-
 /* Se manda a llamar a la etiqueta div con el id root de indez para darle un margin bottom del footer */
 #root{
     margin-bottom: 80px;
@@ -147,22 +146,11 @@ iframe {
     font-size: 30px;
 }
 
-
 #footer{
     margin-top: 50px;
 }
 
 
-#menu .card img{
-    width: 100%;
-    height: 280px;
-}
-
-#menu p{
-
-    text-align: justify;
-    font-size: 15px;
-}
 
 /* Al realizar los mediaquery debo de cambiar muchos font sixze así como alinear la imagen del estado de veracruz */
 
@@ -272,4 +260,20 @@ iframe {
     #jumbotron p {
         font-size: 15px;
     }
+}
+
+@media (max-width: 373px){
+    #containerTitulo h1 {
+        font-size: 14px;
+    }
+    #estado #veracruz {
+        height: 220px;
+        width: 80%;
+        /* text-align: center; */
+    }
+    #acercade {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
 }

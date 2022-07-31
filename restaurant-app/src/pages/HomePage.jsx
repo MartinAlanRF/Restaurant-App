@@ -52,16 +52,11 @@ const HomePage = () => {
               BIENVENIDOS AL SABOR DE VERACRUZ
             </h1>
           </div>
-          <div className="col-12 mt-2  mx-auto">
+          <div className="col-12 mt-2 mx-auto">
             <div className="row">
               <div className="col-lg-4 col-md-4 col-sm-12 ">
                 <div id="estado" className="container ">
-                  <img
-                    id="veracruz"
-                    className=""
-                    src={imageVeracruz}
-                    alt="Imagen del estado de Veracruz, México"
-                  />
+                  <img id="veracruz" className="" src={imageVeracruz} alt="Imagen del estado de Veracruz, México"/>
                 </div>
               </div>
               <div className="col-lg-8 col-md-8 col-sm-12">
@@ -84,11 +79,7 @@ const HomePage = () => {
                 <div className="container text-center">
                   <h3>PLATILLOS FAVORITOS</h3>
                 </div>
-                <div id="carousel"
-                  className="carousel slide  mx-auto"
-                  data-bs-interval={3000}
-                  data-bs-ride="carousel"
-                >
+                <div id="carousel" className="carousel slide  mx-auto" data-bs-ride="carousel"  data-bs-interval={3000}>
                   <div className="carousel-inner">
                     <div className="d-none d-sm-block">
                       <div className="carousel-indicators">
@@ -119,7 +110,6 @@ const HomePage = () => {
                         ></button>
                       </div>
                     </div>
-
                     <div className="carousel-item active  ">
                       <img
                         src={imageCaurosel1}
@@ -162,21 +152,11 @@ const HomePage = () => {
                     </div>
                   </div>
 
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carousel"
-                    data-bs-slide="prev"
-                  >
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" />
                     <span className="visually-hidden">Anterior</span>
                   </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carousel"
-                    data-bs-slide="next"
-                  >
+                  <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
                     <span className="carousel-control-next-icon" />
                     <span className="visually-hidden">Siguiente</span>
                   </button>
