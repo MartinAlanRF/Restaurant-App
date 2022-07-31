@@ -153,6 +153,17 @@ iframe {
 }
 
 
+#menu .card img{
+    width: 100%;
+    height: 280px;
+}
+
+#menu p{
+
+    text-align: justify;
+    font-size: 15px;
+}
+
 /* Al realizar los mediaquery debo de cambiar muchos font sixze así como alinear la imagen del estado de veracruz */
 
 @media (max-width: 1223px) {
