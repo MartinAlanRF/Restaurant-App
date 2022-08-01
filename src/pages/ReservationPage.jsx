@@ -20,7 +20,7 @@ const ReservationPage = () => {
     setRerservaciones(reservaciones);
 
   };
-  obtenerRerservaciones();
+  
 
   /* Se crea una función para eliminar las reservaciones */
 
@@ -38,8 +38,17 @@ const ReservationPage = () => {
 
 
   const alertas = () =>{
-    /* Esta alerta esta pendiente por desarrollar al crear y eliminar reservaciones tanto en 
-    homepage y reservation page */
+/*     const divAlert = document.getElementById('alerta');
+    const divAlertHijo = document.createElement('div');
+    divAlert.appendChild(divAlertHijo);
+    divAlertHijo.className = "alert alert-danger alert-dismissible fade show";
+    const textAlert = document.createElement('strong');
+    textAlert.appendChild(divAlertHijo);
+    textAlert.innerHTML="Reservación eliminada exitosamente";
+    const buttonAlert = document.createElement('button');
+    buttonAlert.appendChild(divAlertHijo);
+    buttonAlert.className = "btn-close";
+    buttonAlert.type = "button" */
   }
 
   return (
