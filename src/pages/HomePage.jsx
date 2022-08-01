@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, } from 'react'
 /* Importanto imagenes de mi carpeta assets */
 import imageVeracruz from "../assets/veracruz.jpg";
 /* Imagenes del carousel */

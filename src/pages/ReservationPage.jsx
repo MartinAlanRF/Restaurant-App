@@ -1,6 +1,6 @@
 import { doc, collection, getDocs, deleteDoc } from 'firebase/firestore';
 import {db} from '../firebase/firebase';
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 
 
 const ReservationPage = () => {
@@ -31,6 +31,11 @@ const ReservationPage = () => {
     await obtenerRerservaciones();
     await alertas();
   }
+
+  useEffect(() => {
+    obtenerRerservaciones();
+  }, [])
+
 
   const alertas = () =>{
     /* Esta alerta esta pendiente por desarrollar al crear y eliminar reservaciones tanto en 
